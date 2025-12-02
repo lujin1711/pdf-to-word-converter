@@ -57,11 +57,11 @@ const PdfConverter = () => {
     try {
       setStatusMessage(`Uploading ${file.name} to server...`);
 
-      // Ensure your backend is running on port 5000 and accepts POST /convert
-      const response = await axios.post('http://localhost:5000/convert', formData, {
-        responseType: 'blob', // Important: we expect a binary file back
-      });
-
+            // Replace localhost with your new Render URL
+const response = await axios.post('https://my-pdf-converter.onrender.com/convert', formData, { 
+    responseType: 'blob' 
+});
+      
       // Create a download link for the returned PDF
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');

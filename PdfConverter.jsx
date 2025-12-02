@@ -57,11 +57,11 @@ const PdfConverter = () => {
     try {
       setStatusMessage(`Uploading ${file.name} to server...`);
 
-            // Replace localhost with your new Render URL
+      // Replace localhost with your new Render URL
 const response = await axios.post('https://word-to-pdf-converter-1-qyai.onrender.com', formData, { 
     responseType: 'blob' 
 });
-      
+
       // Create a download link for the returned PDF
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');

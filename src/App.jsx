@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import PdfConverter from './PdfConverter'
+import PdfConverter from '../PdfConverter'
 import './App.css'
 
 function App() {

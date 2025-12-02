@@ -58,7 +58,7 @@ const PdfConverter = () => {
       setStatusMessage(`Uploading ${file.name} to server...`);
 
             // Replace localhost with your new Render URL
-const response = await axios.post('https://my-pdf-converter.onrender.com/convert', formData, { 
+const response = await axios.post('https://word-to-pdf-converter-1-qyai.onrender.com', formData, { 
     responseType: 'blob' 
 });
       
